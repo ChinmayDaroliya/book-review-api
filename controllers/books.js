@@ -1,9 +1,9 @@
 const Book = require('../models/Book');
 const Review = require('../models/Review');
 
-// @desc    Create new book
-// @route   POST /api/v1/books
-// @access  Private
+// Create new book
+// POST /api/v1/books
+// Private
 exports.createBook = async (req, res, next) => {
   try {
     // Add user to req.body
@@ -20,9 +20,9 @@ exports.createBook = async (req, res, next) => {
   }
 };
 
-// @desc    Delete book
-// @route   DELETE /api/v1/books/:id
-// @access  Private
+// Delete book
+// DELETE /api/v1/books/:id
+// Private
 exports.deleteBook = async (req, res, next) => {
   try {
     const book = await Book.findById(req.params.id);
@@ -57,9 +57,9 @@ exports.deleteBook = async (req, res, next) => {
   }
 };
 
-// @desc    Get all books
-// @route   GET /api/v1/books
-// @access  Public
+// Get all books
+// GET /api/v1/books
+// Public
 exports.getBooks = async (req, res, next) => {
   try {
     let query;
@@ -122,9 +122,9 @@ exports.getBooks = async (req, res, next) => {
   }
 };
 
-// @desc    Get single book
-// @route   GET /api/v1/books/:id
-// @access  Public
+// Get single book
+// GET /api/v1/books/:id
+// Public
 exports.getBook = async (req, res, next) => {
   try {
     const book = await Book.findById(req.params.id);
@@ -172,9 +172,9 @@ exports.getBook = async (req, res, next) => {
   }
 };
 
-// @desc    Get all books
-// @route   GET /api/v1/books
-// @access  Public
+// Get all books
+// GET /api/v1/books
+// Public
 exports.getBooks = async (req, res, next) => {
   try {
     let query;
@@ -237,9 +237,9 @@ exports.getBooks = async (req, res, next) => {
   }
 };
 
-// @desc    Get single book
-// @route   GET /api/v1/books/:id
-// @access  Public
+// Get single book
+// GET /api/v1/books/:id
+// Public
 exports.getBook = async (req, res, next) => {
   try {
     const book = await Book.findById(req.params.id);
